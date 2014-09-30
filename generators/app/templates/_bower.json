@@ -1,0 +1,14 @@
+{
+	"name": "<%= projectName %>",
+	"private": true,
+	"dependencies": {
+		"revealjs": "https://github.com/hakimel/reveal.js",
+		"handlebars": "~1.3.0"
+	},
+	"main": [
+		"./gruntfile.js",
+		"./src/main.scss",
+		"./src/main.js"
+	],
+	"ignore": []
+}

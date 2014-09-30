@@ -1,0 +1,49 @@
+{
+    "name": "generator-reveal",
+    "version": "0.1.0",
+    "description": "Yeoman generator for RevealJS. Allows you to quickly build and publish HTML slideshow presentations.",
+    "license": "MIT",
+    "main": "generators/app/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/trevordmiller/generator-reveal"
+    },
+    "author": {
+        "name": "Trevor D. Miller",
+        "email": "trevordmiller@icloud.com",
+        "url": "www.trevordmiller.com"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "files": [
+        "generators"
+    ],
+    "keywords": [
+        "yeoman-generator",
+        "generator-reveal",
+        "revealjs",
+        "reveal.js",
+        "slideshow",
+        "presentation"
+    ],
+    "dependencies": {
+        "yeoman-generator": "^0.17.0",
+        "chalk": "^0.5.0",
+        "yosay": "^0.3.0"
+    },
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "peerDependencies": {
+        "yo": ">=1.0.0"
+    },
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
+}
