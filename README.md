@@ -21,6 +21,7 @@ Refer to the [RevealJS documentation](http://lab.hakim.se/reveal-js) for slide s
 ## Prerequisites
 
 Before using _Code Deck_, you need to install or update a few things:
+
 0. [Node](http://nodejs.org/): [install](http://nodejs.org/)
 0. [Bower](http://bower.io/): `npm install -g bower`.
 0. [Yeoman](http://yeoman.io/): `npm install -g yo`.
@@ -48,7 +49,7 @@ If you run into any problems, you may need to use the `sudo` command or [reclaim
 
 ## Changelog
 
-### 1.0.0
+##### 1.0.0
 
 - Public release
 
@@ -57,8 +58,5 @@ If you run into any problems, you may need to use the `sudo` command or [reclaim
 -------------------------------------------------------
 
 
-
-# Code Deck
-Powerpoint for coders.
 
 Built with ♡ by [@trevordmiller](http://www.trevordmiller.com).
