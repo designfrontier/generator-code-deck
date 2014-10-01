@@ -4,6 +4,22 @@
 
 	<head>
 
+		<!-- PROJECT LEVEL: CONFIG -->
+		<title><% humanProjectName %></title>
+		<meta name="description" content="<% projectDescription %>" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+		<meta charset="utf-8" />
+
+		<!-- REVEALJS STYLE DEPENDENCIES -->
+		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+
+		<!-- FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+		<!-- PROJECT LEVEL: STYLES -->
+		<link rel="stylesheet" href="all.min.css" />
+
 		<!-- SCRIPTS -->
 		<script src="all.min.js"></script>
 		<script src="partials.js"></script>
@@ -20,7 +36,9 @@
 			'use strict';
 
 			// CONTEXT (DATA)
-			var context = Reveal.getData('api/data.json');
+			var context = {
+				presentationTitle: 'Hello world!'
+			};
 
 			// RENDER THE TEMPLATE
 			document.body.innerHTML = Handlebars.Templates['index.hbs'](context);

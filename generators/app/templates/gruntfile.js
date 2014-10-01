@@ -33,25 +33,25 @@ module.exports = function(grunt) {
 		// HANDLEBARS TEMPLATES & PARTIALS
 		srcHandlebarsFiles: [
 			'src/*.hbs',
-			'src/components/**/*.hbs'
+			'src/sections/**/*.hbs'
 		],
 
 		// SASS/CSS FILES
 		srcSassFiles: [
 			'src/main.scss',
-			'src/components/**/*.scss'
+			'src/sections/**/*.scss'
 		],
 		srcMainSassFile: 'src/main.scss',
 		distMainCssFile: 'dist/all.min.css',
 
 		// JS FILES
 		srcJsBowerComponentFiles: [
-			'src/bower_components/revealjs/reveal.js',
+			'src/bower_components/revealjs/js/reveal.js',
 			'src/bower_components/handlebars/handlebars.runtime.js'
 		],
 		srcJsFiles: [
 			'src/main.js',
-			'src/components/**/*.js'
+			'src/sections/**/*.js'
 		],
 		distMainJsFile: 'dist/all.min.js',
 		gruntConfigJsFiles: [
@@ -99,16 +99,12 @@ module.exports = function(grunt) {
 	// Run 'grunt'
 	grunt.registerTask('default', [
 		'clean',
-		'ipsum',
 		'handlebars',
 		'copy',
 		'usebanner',
-		'scsslint',
 		'sass:dist',
 		'autoprefixer',
-		'jshint',
-		'uglify:dist',
-		'imagemin'
+		'uglify:dist'
 	]);
 
 	// SERVE

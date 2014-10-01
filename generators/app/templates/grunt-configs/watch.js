@@ -33,7 +33,6 @@ module.exports = function(grunt) {
 				'<%= gruntScope.srcSassFiles %>'
 			],
 			tasks: [
-				'scsslint',
 				'sass:dist',
 				'autoprefixer'
 			]
@@ -43,7 +42,6 @@ module.exports = function(grunt) {
 				'<%= gruntScope.srcJsFiles %>'
 			],
 			tasks: [
-				'jshint',
 				'uglify:dist'
 			]
 		},
@@ -52,7 +50,6 @@ module.exports = function(grunt) {
 				'<%= gruntScope.srcImageFiles %>'
 			],
 			tasks: [
-				'imagemin'
 			]
 		}
 	});

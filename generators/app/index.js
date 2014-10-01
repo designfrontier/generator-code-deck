@@ -42,18 +42,8 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		// Require root package.json to avoid npm errors
 		this.pkg = require('../../package.json');
 
-		// BANNER
+		// BANNER ASCII ART
 		this.log(banner);
-
-		// SUB BANNER
-		this.log(headerStyle('Primer: "Project" Generator'));
-
-		// INSTRUCTIONS
-		this.log(highlightStyle('Instructions:'));
-		this.log(highlightStyle('    1) Make sure you are familiar with the most recent Primer standards and documentation (https://code.ldschurch.org/stash/projects/PRIMER/repos/generator-reveal/).'));
-		this.log(highlightStyle('    2) Make sure you are in the correct directory.'));
-		this.log(highlightStyle('    3) Answer the prompts below to generate your Primer "Project".'));
-		this.log('\n');
 	},
 
 	// COMMAND LINE PROMPTS
@@ -68,53 +58,17 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		var prompts = [
 			{
 				type: 'input',
-				name: 'projectName',
-				message: 'Enter the slug for the "project":',
-				default: 'project-name'
-			},
-			{
-				type: 'input',
-				name: 'projectPurpose',
-				message: 'Enter the purpose of the "project", in 1-3 sentences:',
-			},
-			{
-				type: 'checkbox',
-				name: 'globalComponents',
-				message: 'What Primer "Global Components" would you like to include out of the box?',
-				choices: [
-					{
-						name: 'Handlebars (required)',
-						value: 'includeHandlebars',
-						checked: true
-					},
-					{
-						name: 'primer-style-reset (required)',
-						value: 'includePrimerStyleReset',
-						checked: true
-					},
-					{
-						name: 'primer-get-data (required)',
-						value: 'includePrimerGetData',
-						checked: true
-					}
-				]
+				name: 'presentationName',
+				message: 'Enter the slug for the "presentation":',
+				default: 'presentation-name'
 			}
 		];
 
 		// Store user input and other variables for use in generating files from templates
 		this.prompt(prompts, function (props) {
 
-			// Set up function to decide if a bower dependency should be included or not
-			var hasGlobalComponent = function (globalComponent) {
-				return props.globalComponents.indexOf(globalComponent) !== -1;
-			};
-
 			// User input
-			this.projectName = props.projectName;
-			this.projectPurpose = props.projectPurpose;
-			this.includeHandlebars = hasGlobalComponent('includeHandlebars');
-			this.includePrimerStyleReset = hasGlobalComponent('includePrimerStyleReset');
-			this.includePrimerGetData = hasGlobalComponent('includePrimerGetData');
+			this.presentationName = props.presentationName;
 
 			// Hack so that Yeoman wont process grunt variables that should be variables after the project has been generated
 			this.yeomanReplaceTimeStamp = '<%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %>';
@@ -122,7 +76,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			// Other variables to pass along
 			var dateObject = new Date();
 			this.currentDate = dateObject.getFullYear();
-			this.humanProjectName = this._.humanize(props.projectName);
+			this.humanPresentationName = this._.humanize(props.presentationName);
 
 			// Allow the file to continue executing the next function
 			done();
@@ -139,13 +93,8 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 		// Store user input and variables and use them to render the rest of the files from the templates
 		var context = {
-			projectName: this.projectName,
-			humanProjectName: this.humanProjectName,
-			projectPurpose: this.projectPurpose,
-			includeHandlebars: this.includeHandlebars,
-			includePrimerStyleReset: this.includePrimerStyleReset,
-			includePrimerGetData: this.includePrimerGetData,
-			includeSass: this.includeSass,
+			presentationName: this.presentationName,
+			humanPresentationName: this.humanPresentationName,
 			currentDate: this.currentDate,
 			yeomanReplaceTimeStamp: this.yeomanReplaceTimeStamp
 		};
@@ -174,11 +123,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			this.copy('grunt-configs/clean.js', 'grunt-configs/clean.js');
 			this.copy('grunt-configs/copy.js', 'grunt-configs/copy.js');
 			this.copy('grunt-configs/handlebars.js', 'grunt-configs/handlebars.js');
-			this.copy('grunt-configs/imagemin.js', 'grunt-configs/imagemin.js');
-			this.copy('grunt-configs/ipsum.js', 'grunt-configs/ipsum.js');
-			this.copy('grunt-configs/jshint.js', 'grunt-configs/jshint.js');
 			this.copy('grunt-configs/sass.js', 'grunt-configs/sass.js');
-			this.copy('grunt-configs/scsslint.js', 'grunt-configs/scsslint.js');
 			this.copy('grunt-configs/uglify.js', 'grunt-configs/uglify.js');
 			this.copy('grunt-configs/usebanner.js', 'grunt-configs/usebanner.js');
 			this.copy('grunt-configs/watch.js', 'grunt-configs/watch.js');
@@ -194,24 +139,17 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			this.copy('src/main.js', 'src/main.js');
 
 			// COMPONENTS
-			// "components" generated from `yo primer:component`
-			this.mkdir('src/components');
+			// "sections" generated from `yo code-deck:section`
+			this.mkdir('src/sections');
 
-				// Default "components"
-				this.copy('src/components/example-component/_example-component.hbs', 'src/components/example-component/_example-component.hbs');
-				this.copy('src/components/example-component/_example-component.scss', 'src/components/example-component/_example-component.scss');
-				this.copy('src/components/example-component/_example-component.js', 'src/components/example-component/_example-component.js');
-				this.copy('src/components/example-component/README.md', 'src/components/example-component/README.md');
-				this.template('src/components/page-top/_page-top.hbs', 'src/components/page-top/_page-top.hbs', context);
-				this.copy('src/components/page-top/README.md', 'src/components/page-top/README.md');
-				this.template('src/components/page-bottom/_page-bottom.hbs', 'src/components/page-bottom/_page-bottom.hbs', context);
-				this.copy('src/components/page-bottom/README.md', 'src/components/page-bottom/README.md');
+				// Default "sections"
+				this.template('src/sections/example-section/_example-section.hbs', 'src/sections/example-section/_example-section.hbs');
 
 			// IMAGES
 			this.mkdir('src/images');
 
 				// Example image
-				this.copy('src/images/primer-logo.png', 'src/images/primer-logo.png');
+				this.copy('src/images/logo.png', 'src/images/logo.png');
 
 			// FONTS
 			this.mkdir('src/fonts');
@@ -229,7 +167,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 			// Run "bower install"
 			console.log('\n');
-			console.log(highlightStyle('Running "bower install" to install the "src/bower_components" folder and dependencies...'));
+			console.log(highlightStyle('Running "bower install" to install the "src/bower_sections" folder and dependencies...'));
 			console.log('\n');
 			this.bowerInstall('', function() {
 

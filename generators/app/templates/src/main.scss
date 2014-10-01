@@ -1,6 +1,6 @@
 // ================================================================================
 // PROJECT LEVEL: SASS
-// <%= projectName %>
+// <%= presentationName %>
 // Only contains Sass shared across the project.
 // Imports all other Sass files (partials).
 // ================================================================================
@@ -58,6 +58,7 @@ $font-family--secondary: Monaco, monospace;
 $font-size--base: 1.6rem;
 $font-size--medium: 1.8rem;
 $font-size--small: 1.5rem;
+$font-weight--base: 400;
 $margin--small: .7rem;
 $margin--medium: 1.4rem;
 $margin--large: 2.6rem;

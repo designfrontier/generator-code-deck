@@ -10,7 +10,7 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for code based slideshow 
 0. `yo code-deck:section` to **create sections of slides**.
 0. `grunt serve` to **develop** and **present**.
 
-Refer to the [RevealJS documentation](http://lab.hakim.se/reveal-js) for slide specific functionality and options.
+Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for slide specific functionality and options.
 
 
 
@@ -20,7 +20,7 @@ Refer to the [RevealJS documentation](http://lab.hakim.se/reveal-js) for slide s
 
 ## Prerequisites
 
-Before using _Code Deck_, you need to install or update a few things:
+Before using _Code Deck_, you need to install a few things if you don't have them already...
 
 0. [Node](http://nodejs.org/): [install](http://nodejs.org/)
 0. [Bower](http://bower.io/): `npm install -g bower`.

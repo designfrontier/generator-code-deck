@@ -1,6 +1,6 @@
 // ================================================================================
 // PROJECT LEVEL: JS
-// <%= projectName %>
+// <%= presentationName %>
 // Only contains JS shared across the project.
 // ================================================================================
 
@@ -98,4 +98,3 @@ document.addEventListener('DOMContentLoaded', function() {
 		viewDistance: 3,
 	});
 });
-};

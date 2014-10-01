@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
 				// Compile partials (components)
 				{
-					'dist/partials.js': 'src/components/**/*.hbs'
+					'dist/partials.js': 'src/sections/**/*.hbs'
 				},
 
 				// Compile templates (pages)
