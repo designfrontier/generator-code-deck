@@ -38,8 +38,13 @@ If you run into any problems, you may need to use the `sudo` command or [reclaim
 
 ## Features
 
-- Build with [RevealJS](http://lab.hakim.se/reveal-js) at the core.
+- Build with RevealJS at the core for slide animations and functionality.
+- Highlight.js for code highlighting.
+- Grunt setup for easy development and shareable `dist` folder.
+- BrowserSync for style and content live injections during development and realtime collaboration through code examples and inputs during presentation.
+- Ace editor for live code examples and collaboration without needing to switch to an editor.
 - Simple Sass theme that is easily customizable.
+- Handlebars partials and templates for clean, DRY code.
 
 
 

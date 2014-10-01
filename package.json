@@ -1,12 +1,12 @@
 {
     "name": "generator-code-deck",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Powerpoint for coders. A Yeoman generator for code based slideshow presentations",
     "license": "MIT",
     "main": "generators/app/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/trevordmiller/generator-slide-deck"
+        "url": "https://github.com/trevordmiller/generator-code-deck"
     },
     "author": {
         "name": "Trevor D. Miller",
