@@ -1,12 +1,12 @@
 {
-    "name": "generator-reveal",
+    "name": "generator-code-deck",
     "version": "0.1.0",
-    "description": "Yeoman generator for RevealJS. Allows you to quickly build and publish HTML slideshow presentations.",
+    "description": "Powerpoint for coders. A Yeoman generator for code based slideshow presentations",
     "license": "MIT",
     "main": "generators/app/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/trevordmiller/generator-reveal"
+        "url": "https://github.com/trevordmiller/generator-slide-deck"
     },
     "author": {
         "name": "Trevor D. Miller",
