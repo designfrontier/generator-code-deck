@@ -1,14 +1,20 @@
 ![Code Deck - Powerpoint for Coders](assets/logo.png)
 
-```bash
-npm install -g generator-code-deck
-```
+## About
 
-_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for code based slideshow presentations. It was built because HTML slideshows are awesome, but they take too long to make. With _Code Deck_, your project is automatically set up so you can focus on presenting great content. All you need are three commands:
+_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for code based slideshow presentations. It was built because HTML slideshows are awesome, but they take too long to make. With _Code Deck_, your project is _automatically_ set up so you can focus on presenting great content.
 
-0. `yo code-deck` to **create your project**.
-0. `yo code-deck:section` to **create sections of slides**.
-0. `grunt serve` to **develop** and **present**.
+---
+
+## Get Started
+
+0. Run `npm install -g generator-code-deck` to install the generator, once you have the ["Prerequistes"](#prerequisites) setup.
+0. Run `cd` to where you want the project built.
+0. Run `yo code-deck` to **create a project**.
+0. Replace the logo in `src/images/` with your own.
+0. Edit the Sass style variables in `src/styles/main.scss` to match your branding.
+0. Edit the `presentationData` object in `src/scripts/presentation-data.js` to match your presentation's content.
+0. Run `grunt serve` to **develop** and **present**.
 
 Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for slide specific functionality and options.
 

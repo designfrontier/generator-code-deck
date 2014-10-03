@@ -59,8 +59,13 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			{
 				type: 'input',
 				name: 'presentationName',
-				message: 'Enter the slug for the "presentation":',
+				message: 'Enter the slug for the "presentation"',
 				default: 'presentation-name'
+			},
+			{
+				type: 'input',
+				name: 'presentationDescription',
+				message: 'Enter a description for the presentation',
 			}
 		];
 
@@ -69,6 +74,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 			// User input
 			this.presentationName = props.presentationName;
+			this.presentationDescription = props.presentationDescription;
 
 			// Hack so that Yeoman wont process grunt variables that should be variables after the project has been generated
 			this.yeomanReplaceTimeStamp = '<%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %>';
@@ -88,13 +94,14 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 		// Alert user
 		console.log('\n');
-		console.log(highlightStyle('Building "project" folders and files from templates...'));
+		console.log(highlightStyle('Building presentation folders and files from templates...'));
 		console.log('\n');
 
 		// Store user input and variables and use them to render the rest of the files from the templates
 		var context = {
 			presentationName: this.presentationName,
 			humanPresentationName: this.humanPresentationName,
+			presentationDescription: this.presentationDescription,
 			currentDate: this.currentDate,
 			yeomanReplaceTimeStamp: this.yeomanReplaceTimeStamp
 		};
@@ -109,7 +116,6 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		this.copy('.gitattributes', '.gitattributes');
 		this.copy('.editorconfig', '.editorconfig');
 		this.copy('.jshintrc', '.jshintrc');
-		this.copy('.scss-lint.yml', '.scss-lint.yml');
 		this.template('_README.md', 'README.md', context);
 		this.template('_LICENSE.md', 'LICENSE.md', context);
 		this.template('_package.json', 'package.json', context);
@@ -133,23 +139,28 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		this.mkdir('src');
 
 			// ROOT
-			this.copy('src/index.html', 'src/index.html');
+			this.template('src/index.html', 'src/index.html', context);
 			this.copy('src/index.hbs', 'src/index.hbs');
-			this.copy('src/main.scss', 'src/main.scss');
-			this.copy('src/main.js', 'src/main.js');
+			this.copy('src/styles/main.scss', 'src/styles/main.scss');
+			this.copy('src/scripts/main.js', 'src/scripts/main.js');
+			this.copy('src/scripts/presentation-data.js', 'src/scripts/presentation-data.js');
 
 			// COMPONENTS
 			// "sections" generated from `yo code-deck:section`
 			this.mkdir('src/sections');
 
 				// Default "sections"
-				this.template('src/sections/example-section/_example-section.hbs', 'src/sections/example-section/_example-section.hbs');
+				this.template('src/sections/_start.hbs', 'src/sections/_start.hbs');
+				this.template('src/sections/_section-1.hbs', 'src/sections/_section-1.hbs');
+				this.template('src/sections/_section-2.hbs', 'src/sections/_section-2.hbs');
+				this.template('src/sections/_end.hbs', 'src/sections/_end.hbs');
 
 			// IMAGES
 			this.mkdir('src/images');
 
-				// Example image
+				// Example images
 				this.copy('src/images/logo.png', 'src/images/logo.png');
+				this.copy('src/images/example.jpg', 'src/images/example.jpg');
 
 			// FONTS
 			this.mkdir('src/fonts');
@@ -201,7 +212,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		// GOODBYE MESSAGE
 		sayGoodbye: function() {
 			console.log('\n');
-			console.log(highlightStyle('Your project has been generated!'));
+			console.log(highlightStyle('Your presentation has been generated!'));
 			console.log('\n');
 			console.log(highlightStyle(dividerLine));
 			console.log('\n');

@@ -41,9 +41,13 @@
 
         // HANDLEBARS
 		"Handlebars",				// Handlebars templates
+		"presentation",
 
 		// Reveal
-		"Reveal"
+		"Reveal",
+
+		// Ace
+		"ace"
 	],
 
 	// DEVELOPMENT

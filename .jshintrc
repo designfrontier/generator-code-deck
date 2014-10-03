@@ -43,7 +43,10 @@
         "Handlebars",				// Handlebars templates
 
         // REVEALJS
-		"Reveal"
+		"Reveal",
+
+        // ACE EDITOR
+        "ace"
     ],
 
     // DEVELOPMENT

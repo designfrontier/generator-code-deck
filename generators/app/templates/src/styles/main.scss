@@ -1,0 +1,88 @@
+// ================================================================================
+// MAIN SASS FILE
+// Imports other Sass partials and provides theming variables
+// ================================================================================
+
+// --------------------------------------------------------------------------
+// IMPORTS
+// --------------------------------------------------------------------------
+
+// Default mixins and settings
+@import '../bower_components/revealjs/css/theme/template/mixins';
+@import '../bower_components/revealjs/css/theme/template/settings';
+
+// --------------------------------------------------------------------------
+// YOUR THEME
+// --------------------------------------------------------------------------
+
+// Colors
+$mainColor: #fead4c;
+$headingColor: #333;
+$linkColorHover: lighten( $linkColor, 20% );
+$linkColor: $mainColor; // this also includes the progress bar at the bottom
+$selectionBackgroundColor: $mainColor;
+$backgroundColor: #fff; // this is the default, but can be overridden in the index.html "context" object
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,400);
+$mainFont: 'Roboto', sans-serif;
+$headingFont: $mainFont;
+
+// Other
+$headingTextShadow: none;
+$headingTextTransform: none;
+
+// Theme template
+@import '../bower_components/revealjs/css/theme/template/theme';
+
+
+
+
+
+// --------------------------------------------------------------------------
+// REVEAL STYLE RESET
+// --------------------------------------------------------------------------
+
+.reveal {
+
+	// Section title slide
+	.section-title {
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		ul {
+			color: #fff;
+		}
+	}
+
+	// Images
+	section img {
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+	}
+
+	// Progress bar
+	.progress {
+		background: rgba(0, 0, 0, 0.1)c;
+		height: 7px;
+	}
+
+	// Ace editor
+	.ace_editor  {
+		height: 400px;
+		text-align: left;
+		font-family: monospace !important;
+
+		// Make editor larger on large screens
+		@media (min-width: 1000px) {
+			width: 150%;
+			margin-left: -25%;
+		}
+	}
+}
