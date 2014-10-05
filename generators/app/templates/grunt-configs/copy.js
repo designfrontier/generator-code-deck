@@ -14,6 +14,12 @@ module.exports = function(grunt) {
 			src: '*.html',
 			dest: 'dist/'
 		},
+		data: {
+			expand: true,
+			cwd: 'src/',
+			src: 'data.js',
+			dest: 'dist/'
+		},
 		scripts: {
 			expand: true,
 			cwd: 'src/',

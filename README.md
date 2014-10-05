@@ -1,4 +1,4 @@
-![Code Deck - Powerpoint for Coders](assets/logo.png)
+![Code Deck - Powerpoint for Coders](readme-images/logo.png)
 
 ## About
 

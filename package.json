@@ -1,6 +1,6 @@
 {
     "name": "generator-code-deck",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Powerpoint for coders. A Yeoman generator for code based slideshow presentations.",
     "license": "MIT",
     "main": "generators/app/index.js",

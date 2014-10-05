@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 
 		// HANDLEBARS TEMPLATES & PARTIALS
 		srcHandlebarsFiles: [
-			'src/sections/**/*.hbs'
+			'src/templates/**/*.hbs'
 		],
 
 		// SASS/CSS FILES
@@ -48,6 +48,7 @@ module.exports = function(grunt) {
 			'src/bower_components/handlebars/handlebars.runtime.js'
 		],
 		srcJsFiles: [
+			'src/*.js',
 			'src/scripts/**/*.js'
 		],
 		distMainJsFile: 'dist/all.min.js',

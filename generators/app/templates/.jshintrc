@@ -41,7 +41,7 @@
 
         // HANDLEBARS
 		"Handlebars",				// Handlebars templates
-		"presentation",
+		"data",
 
 		// Reveal
 		"Reveal",

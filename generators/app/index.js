@@ -15,7 +15,7 @@
 
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
-var banner = require('../../assets/banner');
+var banner = require('../../banner');
 
 
 
@@ -25,7 +25,6 @@ var banner = require('../../assets/banner');
 // ------------------------------------------------------------------------------
 
 var highlightStyle = chalk.yellow;
-var headerStyle = chalk.yellow.underline;
 var dividerLine = '----------------------------------------------------------';
 
 
@@ -140,20 +139,20 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 			// ROOT
 			this.template('src/index.html', 'src/index.html', context);
-			this.copy('src/index.hbs', 'src/index.hbs');
+			this.copy('src/data.js', 'src/data.js');
 			this.copy('src/styles/main.scss', 'src/styles/main.scss');
 			this.copy('src/scripts/main.js', 'src/scripts/main.js');
-			this.copy('src/scripts/presentation-data.js', 'src/scripts/presentation-data.js');
 
-			// COMPONENTS
-			// "sections" generated from `yo code-deck:section`
-			this.mkdir('src/sections');
+			// TEMPLATES
+			// "templates"
+			this.mkdir('src/templates');
 
-				// Default "sections"
-				this.template('src/sections/_start.hbs', 'src/sections/_start.hbs');
-				this.template('src/sections/_section-1.hbs', 'src/sections/_section-1.hbs');
-				this.template('src/sections/_section-2.hbs', 'src/sections/_section-2.hbs');
-				this.template('src/sections/_end.hbs', 'src/sections/_end.hbs');
+				// Default "templates"
+				this.template('src/templates/index.hbs', 'src/templates/index.hbs');
+				this.template('src/templates/_start.hbs', 'src/templates/_start.hbs');
+				this.template('src/templates/_section-1.hbs', 'src/templates/_section-1.hbs');
+				this.template('src/templates/_section-2.hbs', 'src/templates/_section-2.hbs');
+				this.template('src/templates/_end.hbs', 'src/templates/_end.hbs');
 
 			// IMAGES
 			this.mkdir('src/images');

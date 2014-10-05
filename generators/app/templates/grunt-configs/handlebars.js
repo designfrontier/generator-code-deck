@@ -24,12 +24,12 @@ module.exports = function(grunt) {
 
 				// Compile partials (components)
 				{
-					'dist/partials.js': 'src/sections/**/*.hbs'
+					'dist/partials.js': 'src/templates/_*.hbs'
 				},
 
 				// Compile templates (pages)
 				{
-					'dist/templates.js': 'src/*.hbs'
+					'dist/templates.js': 'src/templates/index.hbs'
 				}
 			]
 		}

@@ -41,6 +41,7 @@
 
         // HANDLEBARS
         "Handlebars",				// Handlebars templates
+        "data",
 
         // REVEALJS
 		"Reveal",
