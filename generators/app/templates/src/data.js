@@ -3,25 +3,26 @@
 // Handlebars data and template rendering
 // ================================================================================
 
+
+// GITHUB DATA
+// Grab user's github data via the GitHub API
+var githubData = getData('https://api.github.com/users/<%= githubUsername %>');
+
 // GLOBAL CONTEXT (DATA)
 var data = {
 
 	// THEME
 	theme: {
-		mainColor: '#fead4c',
+		mainColor: '<%= mainColor %>',
 		specialTransition: 'zoom'
 	},
 
 	// GENERAL
-	title: 'This is the title',
-	subtitle: 'And this is the subtitle',
+	title: '<%= humanPresentationName %>',
+	subtitle: '<%= presentationDescription %>',
+	githubData: githubData,
 	greetingText: 'Hello!',
 	goodbyeText: 'Thanks!',
-	authorName: 'Billy Bob Joe',
-	authorWebsite: {
-		text: '@billybob',
-		href: 'http://github.com'
-	},
 
 	// SECTIONS
 	sections: [

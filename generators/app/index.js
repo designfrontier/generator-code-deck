@@ -57,6 +57,12 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		var prompts = [
 			{
 				type: 'input',
+				name: 'mainColor',
+				message: 'What should the main color of the presentation be?',
+				default: '#fead4c'
+			},
+			{
+				type: 'input',
 				name: 'presentationName',
 				message: 'Enter the slug for the "presentation"',
 				default: 'presentation-name'
@@ -65,6 +71,12 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 				type: 'input',
 				name: 'presentationDescription',
 				message: 'Enter a description for the presentation',
+			},
+			{
+				type: 'input',
+				name: 'githubUsername',
+				message: 'What is your github username?',
+				default: 'billybob'
 			}
 		];
 
@@ -72,8 +84,10 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 		this.prompt(prompts, function (props) {
 
 			// User input
+			this.mainColor = props.mainColor;
 			this.presentationName = props.presentationName;
 			this.presentationDescription = props.presentationDescription;
+			this.githubUsername = props.githubUsername;
 
 			// Hack so that Yeoman wont process grunt variables that should be variables after the project has been generated
 			this.yeomanReplaceTimeStamp = '<%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %>';
@@ -98,9 +112,11 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 		// Store user input and variables and use them to render the rest of the files from the templates
 		var context = {
+			mainColor: this.mainColor,
 			presentationName: this.presentationName,
 			humanPresentationName: this.humanPresentationName,
 			presentationDescription: this.presentationDescription,
+			githubUsername: this.githubUsername,
 			currentDate: this.currentDate,
 			yeomanReplaceTimeStamp: this.yeomanReplaceTimeStamp
 		};
@@ -142,6 +158,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			this.copy('src/data.js', 'src/data.js');
 			this.copy('src/styles/main.scss', 'src/styles/main.scss');
 			this.copy('src/scripts/main.js', 'src/scripts/main.js');
+			this.copy('src/scripts/get-data.js', 'src/scripts/get-data.js');
 
 			// TEMPLATES
 			// "templates"

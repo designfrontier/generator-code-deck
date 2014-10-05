@@ -16,7 +16,7 @@
 // --------------------------------------------------------------------------
 
 // Colors
-$mainColor: #fead4c;
+$mainColor: <%= mainColor %>;
 $headingColor: #333;
 $linkColorHover: lighten( $linkColor, 20% );
 $linkColor: $mainColor; // this also includes the progress bar at the bottom

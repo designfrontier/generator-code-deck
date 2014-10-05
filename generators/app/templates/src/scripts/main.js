@@ -4,26 +4,6 @@
 // Only contains JS shared across the project.
 // ================================================================================
 
-// VanillaJS HTTP Get request and JSON parser
-Reveal.getData = function(apiUrl){
-	'use strict';
-
-	// Setup
-	var xmlHttp = null;
-	xmlHttp = new XMLHttpRequest();
-	xmlHttp.open( 'GET', apiUrl, false );
-	xmlHttp.send( null );
-
-	// Get the json
-	var dataString = xmlHttp.responseText;
-
-	// Convert the returned JSON string into an object literal
-	var dataObject = JSON.parse(dataString);
-
-	// Return the object literal
-	return dataObject;
-};
-
 // Initialize revealjs when page has loaded
 document.addEventListener('DOMContentLoaded', function() {
 	'use strict';

@@ -5,9 +5,10 @@
 </section>
 
 	<section>
+		<img src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
 		<h2>{{ greetingText }}</h2>
-		<p>My name is {{ authorName }}</p>
-		<p><a href="{{ authorWebsite.href }}">{{ authorWebsite.text }}</a>
+		<p>{{ githubData.name }}</p>
+		<p><a href="{{ githubData.html_url }}">@{{ githubData.login }}</a>
 	</section>
 
 	<section>
