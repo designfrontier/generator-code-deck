@@ -2,8 +2,7 @@
 	"name": "<%= presentationName %>",
 	"dependencies": {
 		"revealjs": "https://github.com/hakimel/reveal.js.git",
-		"handlebars": "~1.3.0",
-		"ace": "https://github.com/ajaxorg/ace-builds.git"
+		"handlebars": "~1.3.0"
 	},
 	"main": [
 		"./gruntfile.js",

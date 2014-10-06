@@ -167,8 +167,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 				// Default "templates"
 				this.template('src/templates/index.hbs', 'src/templates/index.hbs');
 				this.template('src/templates/_start.hbs', 'src/templates/_start.hbs');
-				this.template('src/templates/_section-1.hbs', 'src/templates/_section-1.hbs');
-				this.template('src/templates/_section-2.hbs', 'src/templates/_section-2.hbs');
+				this.template('src/templates/_section.hbs', 'src/templates/_section.hbs');
 				this.template('src/templates/_end.hbs', 'src/templates/_end.hbs');
 
 			// IMAGES

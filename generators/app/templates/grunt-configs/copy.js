@@ -37,12 +37,6 @@ module.exports = function(grunt) {
 			cwd: 'src/bower_components/revealjs/css/',
 			src: 'reveal.min.css',
 			dest: 'dist/'
-		},
-		ace: {
-			expand: true,
-			cwd: 'src/bower_components/',
-			src: 'ace/**/*',
-			dest: 'dist/'
 		}
 	});
 };

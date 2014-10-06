@@ -3,6 +3,7 @@
 // Handlebars data and template rendering
 // ================================================================================
 
+'use strict';
 
 // GITHUB DATA
 // Grab user's github data via the GitHub API
@@ -27,65 +28,54 @@ var data = {
 	// SECTIONS
 	sections: [
 		{
-			title: 'This is a title 1',
+			title: 'This is the 1st section',
 			subtitle: 'This is a subtitle 1',
 			slides: [
 				{
-					title: 'This is a slide 1'
+					title: 'This is the 1st slide',
+					uniqueContent: '
+						<p>Hi there!</p>
+					'
 				},
 				{
-					title: 'This is a slide 2'
+					title: 'This is the 2nd slide',
+					uniqueContent: '
+						<img src="images/example.jpg" alt="Lorem ipsum" />
+					'
 				},
 				{
-					title: 'This is a slide 3'
-				},
-				{
-					title: 'This is a slide 4'
-				},
-				{
-					title: 'This is a slide 5'
+					title: 'This is the 3rd slide',
+					uniqueContent: '
+						<iframe class="stretch" src="//www.youtube.com/embed/y-waTi8BPdk" frameborder="0" allowfullscreen></iframe>
+					'
 				}
 			]
 		},
 		{
-			title: 'This is a title 2',
+			title: 'This is the 2nd section',
 			subtitle: 'This is a subtitle 2',
 			slides: [
 				{
-					title: 'This is a slide 1'
+					title: 'This is the 1st slide',
+					uniqueContent: '
+						<ul>
+							<li class="fragment">Nisi amet enim aliquip tempor qui.</li>
+							<li class="fragment">Aliquip enim consectetur dolore ea aliqua aliqua aute.</li>
+							<li class="fragment">Commodo tempor ea cillum sit exercitation.</li>
+						</ul>
+					'
 				},
 				{
-					title: 'This is a slide 2'
-				},
-				{
-					title: 'This is a slide 3'
-				},
-				{
-					title: 'This is a slide 4'
-				},
-				{
-					title: 'This is a slide 5'
-				}
-			]
-		},
-		{
-			title: 'This is a title 3',
-			subtitle: 'This is a subtitle 3',
-			slides: [
-				{
-					title: 'This is a slide 1'
-				},
-				{
-					title: 'This is a slide 2'
-				},
-				{
-					title: 'This is a slide 3'
-				},
-				{
-					title: 'This is a slide 4'
-				},
-				{
-					title: 'This is a slide 5'
+					title: 'This is the 2nd slide',
+					uniqueContent: '
+						<pre>
+							<code class="javascript">
+								var coolFunction = function() {
+									console.log("I am a cool function");
+								};
+							</code>
+						</pre>
+					'
 				}
 			]
 		}
