@@ -1,0 +1,13 @@
+{{!-- Section title slide --}}
+<section class="section-title" data-background="<%= mainColor %>" data-transition="zoom">
+	<h1>{{ title }}</h1>
+	{{#if subtitle }}<h3>{{ subtitle }}</h3>{{/if}}
+</section>
+
+	{{!-- Repeat for each slide in the section --}}
+	{{#each slides }}
+		<section>
+			<h2>{{ title }}</h2>
+			{{{ uniqueContent }}}
+		</section>
+	{{/each}}

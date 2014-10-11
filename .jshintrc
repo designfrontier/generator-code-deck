@@ -1,6 +1,6 @@
 // ================================================================================
 // JSHINT CONFIG
-// trevordmiller JS standards.
+// JS linting.
 // http://jshint.com/docs
 // ================================================================================
 
@@ -44,10 +44,10 @@
         "data",
 
         // REVEALJS
-		"Reveal",
+        "Reveal",
 
-        // ACE EDITOR
-        "ace"
+        // HIGHLIGHTJS
+        "hljs"
     ],
 
     // DEVELOPMENT
@@ -57,6 +57,7 @@
     // ES5
     "strict"		:	true,		// Require `use strict` pragma  in every file.
     "globalstrict"	:	true,		// Allow global "use strict" (also enables 'strict') - prevents concatenation problems.
+    "multistr"      :   true,       // Allow multi-line strings
 
     // THE GOOD PARTS
     "asi"			:	false,		// Tolerate Automatic Semicolon Insertion (no semicolons).

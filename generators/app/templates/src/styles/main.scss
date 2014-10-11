@@ -16,12 +16,14 @@
 // --------------------------------------------------------------------------
 
 // Colors
+$baseTextColor: #333333;
 $mainColor: <%= mainColor %>;
 $headingColor: #333;
-$linkColorHover: lighten( $linkColor, 20% );
 $linkColor: $mainColor; // this also includes the progress bar at the bottom
+$linkColorHover: lighten($linkColor, 15%);
 $selectionBackgroundColor: $mainColor;
 $backgroundColor: #fff; // this is the default, but can be overridden in the index.html "context" object
+$lightContrast: #e9e9e9;
 
 // Fonts
 @import url(http://fonts.googleapis.com/css?family=Roboto:900,400);
@@ -31,6 +33,9 @@ $headingFont: $mainFont;
 // Other
 $headingTextShadow: none;
 $headingTextTransform: none;
+$borderRadiusBase: 7px;
+$paddingBase: 2rem;
+$marginBase: 1rem;
 
 // Theme template
 @import '../bower_components/revealjs/css/theme/template/theme';
@@ -44,20 +49,35 @@ $headingTextTransform: none;
 // --------------------------------------------------------------------------
 
 .reveal {
+	font-size: 300%;
+	color: $baseTextColor;
 
-	// Section title slide
-	.section-title {
+	// Branding
+	strong {
+		color: $mainColor;
+	}
 
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		p,
-		ul {
-			color: #fff;
-		}
+	// h3 contrast
+	h3 {
+		color: rgba(0, 0, 0, .7);
+	}
+
+	// heading cushion
+	h2 {
+		margin-bottom: $marginBase;
+	}
+
+	// general cushions
+	p,
+	ul,
+	ol {
+		margin: $marginBase auto;
+	}
+
+	// lists
+	ul,
+	ol {
+		max-width: 75%;
 	}
 
 	// Images
@@ -67,22 +87,62 @@ $headingTextTransform: none;
 		box-shadow: none;
 	}
 
-	// Progress bar
-	.progress {
-		background: rgba(0, 0, 0, 0.1)c;
-		height: 7px;
+	// Code
+	pre {
+		box-shadow: none;
+
+		code {
+			border-radius: $borderRadiusBase;
+			padding: 0 $paddingBase;
+		}
 	}
 
-	// Ace editor
-	.ace_editor  {
-		height: 400px;
-		text-align: left;
-		font-family: monospace !important;
+	.code {
+		font-family: monospace;
+		color: $mainColor;
+	}
 
-		// Make editor larger on large screens
-		@media (min-width: 1000px) {
-			width: 150%;
-			margin-left: -25%;
+	.constrain-width {
+		max-width: 300px;
+	}
+
+	// Progress bar
+	.progress {
+		background: rgba(0, 0, 0, 0.1);
+		height: 10px;
+	}
+
+	// Links
+	a {
+		text-decoration: underline !important;
+	}
+
+	blockquote {
+		padding: $paddingBase;
+		background: $lightContrast;
+		border-radius: $borderRadiusBase;
+	}
+
+	// Section title slides
+	.section-title {
+
+		h1,
+		h2,
+		h4,
+		h5,
+		h6 {
+			color: #fff;
+		}
+
+		h3,
+		ul,
+		ol,
+		p {
+			color: rgba(255, 255, 255, .5);
+		}
+
+		strong {
+			color: #fff;
 		}
 	}
 }

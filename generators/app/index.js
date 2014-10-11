@@ -1,7 +1,7 @@
 // ================================================================================
-// PRIMER LEVEL: PAGE SUB-GENERATOR
-// Scaffolds out a project with the Primer default package (linting files, Grunt tasks, Bower dependencies, directory structure etc.).
-// https://code.ldschurch.org/stash/projects/PRIMER/repos/generator-reveal/browse
+// CODE DECK LEVEL: PAGE SUB-GENERATOR
+// Scaffolds out a project with the CodeDeck default package (linting files, Grunt tasks, Bower dependencies, directory structure etc.).
+// https://code.ldschurch.org/stash/projects/CODE DECK/repos/generator-reveal/browse
 // http://yeoman.io/authoring/running-context.html
 // ================================================================================
 
@@ -33,7 +33,7 @@ var dividerLine = '----------------------------------------------------------';
 // "PROJECT" GENERATOR PROCESS
 // ------------------------------------------------------------------------------
 
-var PrimerGenerator = yeoman.generators.Base.extend({
+var CodeDeckGenerator = yeoman.generators.Base.extend({
 
 	// INIT
 	initializing: function() {
@@ -76,7 +76,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 				type: 'input',
 				name: 'githubUsername',
 				message: 'What is your github username?',
-				default: 'billybob'
+				default: 'octocat'
 			}
 		];
 
@@ -160,15 +160,13 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 			this.copy('src/scripts/main.js', 'src/scripts/main.js');
 			this.copy('src/scripts/get-data.js', 'src/scripts/get-data.js');
 
-			// TEMPLATES
-			// "templates"
+			// HANDLEBARS TEMPLATES
 			this.mkdir('src/templates');
 
 				// Default "templates"
 				this.template('src/templates/index.hbs', 'src/templates/index.hbs');
 				this.template('src/templates/_start.hbs', 'src/templates/_start.hbs');
-				this.template('src/templates/_section-1.hbs', 'src/templates/_section-1.hbs');
-				this.template('src/templates/_section-2.hbs', 'src/templates/_section-2.hbs');
+				this.template('src/templates/_section.hbs', 'src/templates/_section.hbs');
 				this.template('src/templates/_end.hbs', 'src/templates/_end.hbs');
 
 			// IMAGES
@@ -176,10 +174,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 
 				// Example images
 				this.copy('src/images/logo.png', 'src/images/logo.png');
-				this.copy('src/images/example.jpg', 'src/images/example.jpg');
-
-			// FONTS
-			this.mkdir('src/fonts');
+				this.copy('src/images/example.png', 'src/images/example.png');
 	},
 
 	// INSTALL DEPENDENCIES
@@ -252,4 +247,4 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 // MODULE
 // ------------------------------------------------------------------------------
 
-module.exports = PrimerGenerator;
+module.exports = CodeDeckGenerator;

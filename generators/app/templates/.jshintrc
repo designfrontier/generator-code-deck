@@ -1,6 +1,6 @@
 // ================================================================================
 // JSHINT CONFIG
-// Linting for JS standards.
+// JS linting.
 // http://jshint.com/docs
 // ================================================================================
 
@@ -15,7 +15,7 @@
 	"jquery"		:	true,		// jQuery globals
 	"predef"		:	[			// project globals
 
-        // JASMINE
+		// JASMINE
 		"afterEach",
 		"beforeEach",
 		"describe",
@@ -39,15 +39,15 @@
 		"module",
 		"require",
 
-        // HANDLEBARS
+		// HANDLEBARS
 		"Handlebars",				// Handlebars templates
 		"data",
 
-		// Reveal
+		// REVEALJS
 		"Reveal",
 
-		// Ace
-		"ace"
+		// HIGHLIGHTJS
+		"hljs"
 	],
 
 	// DEVELOPMENT
@@ -56,7 +56,8 @@
 
 	// ES5
 	"strict"		:	true,		// Require `use strict` pragma  in every file.
-	"globalstrict"	:	false,		// Allow global "use strict" (also enables 'strict') - prevents concatenation problems.
+	"globalstrict"	:	true,		// Allow global "use strict" (also enables 'strict') - prevents concatenation problems.
+	"multistr"      :   true,       // Allow multi-line strings
 
 	// THE GOOD PARTS
 	"asi"			:	false,		// Tolerate Automatic Semicolon Insertion (no semicolons).

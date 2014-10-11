@@ -1,21 +1,24 @@
+{{!-- Main title slide --}}
 <section class="section-title" data-background="{{ theme.mainColor }}" data-transition="{{ theme.specialTransition }}">
 	<img src="images/logo.png" alt="Logo" />
-	<h1>{{ title }}</h1>
+	<h2>{{ title }}</h2>
 	<h3>{{ subtitle }}</h3>
 </section>
 
-	<section>
-		<img src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
-		<h2>{{ greetingText }}</h2>
-		<p>{{ githubData.name }}</p>
-		<p><a href="{{ githubData.html_url }}">@{{ githubData.login }}</a>
-	</section>
+{{!-- About the author --}}
+<section>
+	<img class="constrain-width" src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
+	<h2>{{ greetingText }}</h2>
+	<p>{{ githubData.name }}</p>
+	<p><a href="{{ githubData.html_url }}">@{{ githubData.login }}</a>
+</section>
 
-	<section>
-		<h2>Presentation Overview</h2>
-		<ul>
-			{{#each sections }}
-				<li class="fragment">{{ title }}</li>
-			{{/each }}
-		</ul>
-	</section>
+{{!-- Presentation outline --}}
+<section>
+	<h2>Presentation Overview</h2>
+	<ul>
+		{{#each sections }}
+			<li class="fragment">{{ title }}</li>
+		{{/each }}
+	</ul>
+</section>

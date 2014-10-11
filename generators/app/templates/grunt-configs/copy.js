@@ -32,17 +32,17 @@ module.exports = function(grunt) {
 			src: 'images/**/*.{png,jpg,gif,svg}',
 			dest: 'dist/'
 		},
-		reveal: {
+		revealjs: {
 			expand: true,
 			cwd: 'src/bower_components/revealjs/css/',
 			src: 'reveal.min.css',
-			dest: 'dist/'
+			dest: 'dist/bower_components_dist/'
 		},
-		ace: {
+		highlightjs: {
 			expand: true,
-			cwd: 'src/bower_components/',
-			src: 'ace/**/*',
-			dest: 'dist/'
+			cwd: 'src/bower_components/highlightjs/src/styles/',
+			src: 'tomorrow-night.css',
+			dest: 'dist/bower_components_dist/'
 		}
 	});
 };

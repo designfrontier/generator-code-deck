@@ -3,14 +3,14 @@
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('primer generator', function () {
+describe('codedeck generator', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('primer:app', [
+      this.app = helpers.createGenerator('codedeck:app', [
         '../../app'
       ]);
       done();
