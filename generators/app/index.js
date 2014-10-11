@@ -15,6 +15,7 @@
 
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var banner = require('../../banner');
 
 
 
@@ -25,33 +26,6 @@ var chalk = require('chalk');
 
 var highlightStyle = chalk.yellow;
 var dividerLine = '----------------------------------------------------------';
-var logoStyle = chalk.cyan;
-
-
-
-// ------------------------------------------------------------------------------
-// ASCII ART
-// ------------------------------------------------------------------------------
-
-// MAIN TEXT
-var logo = ''
-	+ '                                                         ' + '\n'
-	+ '  ####   ####  #####  ###### #####  ######  ####  #    # ' + '\n'
-	+ ' #    # #    # #    # #      #    # #      #    # #   #  ' + '\n'
-	+ ' #      #    # #    # #####  #    # #####  #      ####   ' + '\n'
-	+ ' #      #    # #    # #      #    # #      #      #  #   ' + '\n'
-	+ ' #    # #    # #    # #      #    # #      #    # #   #  ' + '\n'
-	+ '  ####   ####  #####  ###### #####  ######  ####  #    # ' + '\n'
-	+ '                                                         ' + '\n'
-	+ '                  Powerpoint for Coders                  ' + '\n'
-	;
-
-// COMPLETE BANNER
-var banner = ''
-	+ '\n'
-	+ logoStyle(logo)
-	+ '\n'
-	;
 
 
 
