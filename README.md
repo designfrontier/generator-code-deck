@@ -13,7 +13,7 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 ### **Generate** your _Code Deck_:
 
 0. Once you have the ["Prerequistes"](#prerequisites) installed, run `npm install -g generator-code-deck` to install the _Code Deck_ Yeoman generator.
-0. `cd` to the directory where you want your presentation to be.
+0. `cd` to the directory where you want to generate your presentation.
 0. Run `yo code-deck` and answer the prompts.
 
 ### **Customize** your _Code Deck_:
@@ -23,7 +23,7 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 
 Use the `grunt serve` command in the root directory to develop and present.
 
-_Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for slide specific functionality and options._
+_Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for more options._
 
 
 
@@ -35,13 +35,13 @@ _Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for
 
 Before using _Code Deck_, you need to install a few things if you don't have them already...
 
-0. [Node](http://nodejs.org/): [install](http://nodejs.org/)
+0. [Node](http://nodejs.org/): [download](http://nodejs.org/)
 0. [Bower](http://bower.io/): `npm install -g bower`.
 0. [Yeoman](http://yeoman.io/): `npm install -g yo`.
 0. [Grunt](http://gruntjs.com/): `npm install -g grunt-cli`.
 0. [Sass](http://sass-lang.com/): `gem install sass`.
 
-If you run into any problems, you may need to use the `sudo` command or [reclaim ownership of the `.npm` directory](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo).
+If you run into any problems, you may need to use the `sudo` command or [reclaim ownership of your `.npm` directory](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo).
 
 
 
