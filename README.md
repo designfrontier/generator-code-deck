@@ -16,16 +16,13 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 0. `cd` to the directory where you want to generate your presentation.
 0. Run `yo code-deck` and answer the prompts.
 
-### **Customize**:
+### **Develop**:
 
 0. Replace `src/images/logo.png` with your own logo.
+0. Run `grunt serve`.
 0. Edit the data in `src/data.js`
 
 _Refer to the [RevealJS documentation](https://github.com/hakimel/reveal.js) for more options._
-
-### **Develop** & **Present**:
-
-Use the `grunt serve` command in your presentation's root directory to develop and present.
 
 
 
