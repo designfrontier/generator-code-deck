@@ -12,7 +12,7 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=-VIn185iE5w
 " target="_blank"><img src="readme-images/intro.gif"
-alt="Code Deck video tutorial thumbnail" width="240" height="180" border="10" /></a>
+alt="Code Deck video tutorial thumbnail" /></a>
 
 [View on Youtube](http://youtu.be/-VIn185iE5w)
 
