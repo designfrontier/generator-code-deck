@@ -1,13 +1,13 @@
 {{!-- Main title slide --}}
 <section class="section-title" data-background="{{ theme.mainColor }}" data-transition="{{ theme.specialTransition }}">
 	<img src="images/logo.png" alt="Logo" />
-	<h1>{{ title }}</h1>
+	<h2>{{ title }}</h2>
 	<h3>{{ subtitle }}</h3>
 </section>
 
 {{!-- About the author --}}
 <section>
-	<img src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
+	<img class="constrain-width" src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
 	<h2>{{ greetingText }}</h2>
 	<p>{{ githubData.name }}</p>
 	<p><a href="{{ githubData.html_url }}">@{{ githubData.login }}</a>

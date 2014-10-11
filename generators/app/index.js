@@ -76,7 +76,7 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 				type: 'input',
 				name: 'githubUsername',
 				message: 'What is your github username?',
-				default: 'billybob'
+				default: 'octocat'
 			}
 		];
 

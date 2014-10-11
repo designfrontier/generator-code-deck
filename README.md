@@ -2,7 +2,7 @@
 
 ## About
 
-_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for code based slideshow presentations. It was built because HTML slideshows are awesome, but they take too long to make. With _Code Deck_, your project is _automatically_ set up so you can focus on presenting great content.
+_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based slideshow presentations. It was built because HTML slideshows are awesome, but they take too long to make. With _Code Deck_, your project is _automatically_ set up so you can focus on presenting great content.
 
 ---
 
@@ -58,6 +58,15 @@ If you run into any problems, you may need to use the `sudo` command or [reclaim
 
 
 ## Changelog
+
+##### 1.2.0
+
+-
+
+##### 1.1.0
+
+- Creating a `section` template which is re-used for each `section` object in `data.js`.
+- Moving all content to the `data` object in `data.js` for easier editing.
 
 ##### 1.0.0
 

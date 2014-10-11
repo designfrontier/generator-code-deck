@@ -46,8 +46,8 @@
 		// REVEALJS
 		"Reveal",
 
-		// ACE EDITOR
-		"ace"
+		// HIGHLIGHTJS
+		"hljs"
 	],
 
 	// DEVELOPMENT
