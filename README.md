@@ -2,7 +2,9 @@
 
 ## About
 
-_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based slideshow presentations. It was built because HTML slideshows are awesome, but they take too long to make. With _Code Deck_, your project is **automatically** set up so you can focus on presenting great content.
+_Code Deck_ is **"Powerpoint for Coders"**: a [Yeoman generator](http://yeoman.io/) for creating code based slideshow presentations.
+
+It was built because HTML slideshows are awesome, **but they take too long to make**. With _Code Deck_, your project is **automatically** set up so you can focus on presenting great content.
 
 
 
@@ -10,21 +12,15 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 
 
 
-## Get Started
+## Instructions
 
-0. Run `npm install -g generator-code-deck` to install the generator, once you have the ["Prerequistes"](#prerequisites) setup.
-0. Run `cd` to where you want the project built.
-0. Run `yo code-deck` to **create a project**.
+To setup your presentation:
 
+0. Once you have the ["Prerequistes"](#prerequisites) installed, run `npm install -g generator-code-deck` to install the _Code Deck_ Yeoman generator.
+0. `cd` to the directory where you want your presentation to be.
+0. Run `yo code-deck` and answer the prompts to generate your presentation.
 
-
--------------------------------------------------------
-
-
-
-## Customizing your presentation
-
-After you run the _Code Deck_ generator, you only need to do **two** things:
+To customize your _Code Deck_, you only need to do **two** things:
 
 0. Replace `src/images/logo.png` with your own logo.
 0. Edit the data in `src/data.js`.
