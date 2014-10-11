@@ -1,7 +1,7 @@
 // ================================================================================
-// PRIMER LEVEL: PAGE SUB-GENERATOR
-// Scaffolds out a project with the Primer default package (linting files, Grunt tasks, Bower dependencies, directory structure etc.).
-// https://code.ldschurch.org/stash/projects/PRIMER/repos/generator-reveal/browse
+// CODE DECK LEVEL: PAGE SUB-GENERATOR
+// Scaffolds out a project with the CodeDeck default package (linting files, Grunt tasks, Bower dependencies, directory structure etc.).
+// https://code.ldschurch.org/stash/projects/CODE DECK/repos/generator-reveal/browse
 // http://yeoman.io/authoring/running-context.html
 // ================================================================================
 
@@ -33,7 +33,7 @@ var dividerLine = '----------------------------------------------------------';
 // "PROJECT" GENERATOR PROCESS
 // ------------------------------------------------------------------------------
 
-var PrimerGenerator = yeoman.generators.Base.extend({
+var CodeDeckGenerator = yeoman.generators.Base.extend({
 
 	// INIT
 	initializing: function() {
@@ -251,4 +251,4 @@ var PrimerGenerator = yeoman.generators.Base.extend({
 // MODULE
 // ------------------------------------------------------------------------------
 
-module.exports = PrimerGenerator;
+module.exports = CodeDeckGenerator;

@@ -74,6 +74,12 @@ $marginBase: 1rem;
 		margin: $marginBase auto;
 	}
 
+	// lists
+	ul,
+	ol {
+		max-width: 75%;
+	}
+
 	// Images
 	section img {
 		background: transparent;

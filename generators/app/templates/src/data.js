@@ -23,30 +23,13 @@ var data = {
 	subtitle: '<%= presentationDescription %>',
 	githubData: githubData,
 	greetingText: 'Hello!',
-	goodbyeText: 'Thanks!',
+	goodbyeText: 'That\'s all folks!',
 
 	// SECTIONS
 	sections: [
 		{
-			title: 'This is the 2nd section',
-			subtitle: 'This is a subtitle 2',
-			slides: [
-				{
-					title: 'This is the 1st slide',
-					uniqueContent: '
-						<p>After you generator your slideshow, you only need to do two things:</p>
-						<ol>
-							<li>Replace <span class="code">src/images/logo.png</span> with your own logo.</li>
-							<li>Edit the data in <span class="code">src/data.js</span></li>
-						</ol>
-						<p>Use the <span class="code">grunt serve</span> commmand in the root directory to develop and present.</p>
-					'
-				}
-			]
-		},
-		{
 			title: 'This is the 1st section',
-			subtitle: 'This is a subtitle 1',
+			subtitle: 'This is a subtitle',
 			slides: [
 				{
 					title: 'This is the 1st slide',
@@ -98,6 +81,19 @@ var coolFunction = function() {
 						<blockquote>
 							"This is a quoteblock." - Some cool dude.
 						</blockquote>
+					'
+				}
+			]
+		},
+		{
+			title: 'This is the 2nd section',
+			subtitle: 'This is a subtitle',
+			slides: [
+				{
+					title: 'This is the 1st slide',
+					uniqueContent: '
+						<p>And here is some more content.</p>
+						<p>Just copy sections and slides to inside of <span class="code">src/data.js</span> to add to your <em>Code Deck</em>.</p>
 					'
 				}
 			]
