@@ -114,10 +114,7 @@ $marginBase: 1rem;
 
 	// Links
 	a {
-		&:hover,
-		a:active {
-			text-decoration: underline;
-		}
+		text-decoration: underline !important;
 	}
 
 	blockquote {

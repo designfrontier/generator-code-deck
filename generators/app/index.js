@@ -160,8 +160,7 @@ var CodeDeckGenerator = yeoman.generators.Base.extend({
 			this.copy('src/scripts/main.js', 'src/scripts/main.js');
 			this.copy('src/scripts/get-data.js', 'src/scripts/get-data.js');
 
-			// TEMPLATES
-			// "templates"
+			// HANDLEBARS TEMPLATES
 			this.mkdir('src/templates');
 
 				// Default "templates"
@@ -175,10 +174,7 @@ var CodeDeckGenerator = yeoman.generators.Base.extend({
 
 				// Example images
 				this.copy('src/images/logo.png', 'src/images/logo.png');
-				this.copy('src/images/example.jpg', 'src/images/example.jpg');
-
-			// FONTS
-			this.mkdir('src/fonts');
+				this.copy('src/images/example.png', 'src/images/example.png');
 	},
 
 	// INSTALL DEPENDENCIES

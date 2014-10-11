@@ -1,31 +1,30 @@
 // ================================================================================
 // DATA
-// Handlebars data and template rendering
 // ================================================================================
 
 'use strict';
 
-// GITHUB DATA
 // Grab user's github data via the GitHub API
 var githubData = getData('https://api.github.com/users/<%= githubUsername %>');
 
-// GLOBAL CONTEXT (DATA)
+// Global context for Handlebars templates in `src/templates`
 var data = {
+	githubData: githubData,
 
-	// THEME
+
+
+	// ------------------------------------------
+	// CUSTOMIZE BELOW
+	// ------------------------------------------
+
 	theme: {
 		mainColor: '<%= mainColor %>',
 		specialTransition: 'zoom'
 	},
-
-	// GENERAL
 	title: '<%= humanPresentationName %>',
 	subtitle: '<%= presentationDescription %>',
-	githubData: githubData,
-	greetingText: 'Hello!',
-	goodbyeText: 'That\'s all folks!',
-
-	// SECTIONS
+	greetingText: 'This is greeting text!',
+	goodbyeText: 'This is goodbye text!',
 	sections: [
 		{
 			title: 'This is the 1st section',
@@ -92,8 +91,7 @@ var coolFunction = function() {
 				{
 					title: 'This is the 1st slide',
 					uniqueContent: '
-						<p>And here is some more content.</p>
-						<p>Just copy sections and slides to inside of <span class="code">src/data.js</span> to add to your <em>Code Deck</em>.</p>
+						<p>You can add more sections and slides inside of <span class="code">src/data.js</span>.</p>
 					'
 				}
 			]

@@ -21,4 +21,6 @@ To work on this project:
 
 ---
 
-&copy; <%= currentDate %>. All rights reserved.
+Built with ♡ by [<%= githubUsername %>](https://github.com/<%= githubUsername %>).
+
+<%= currentDate %>
