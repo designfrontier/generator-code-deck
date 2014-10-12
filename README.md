@@ -1,6 +1,6 @@
 ![Code Deck - Powerpoint for Coders](readme-images/logo.png)
 
-_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based slideshow presentations. It was built because HTML slideshows are awesome, **but they take too long to make**. With _Code Deck_, your project is **automatically** set up so you can focus on presenting great content.
+_Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code-based slideshow presentations. It was built because HTML slideshows are awesome, **but they take too long to make**. With _Code Deck_, your project is **automatically** set up so you can focus on presenting great content.
 
 
 
@@ -10,11 +10,11 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code based s
 
 ## Intro Video
 
+[View on Youtube](http://youtu.be/-VIn185iE5w)
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=-VIn185iE5w
 " target="_blank"><img src="readme-images/intro.gif"
 alt="Code Deck video tutorial thumbnail" /></a>
-
-[View on Youtube](http://youtu.be/-VIn185iE5w)
 
 
 
