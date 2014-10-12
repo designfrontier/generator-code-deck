@@ -10,7 +10,7 @@ _Code Deck_ is a [Yeoman generator](http://yeoman.io/) for creating code-based s
 
 ## Intro Video
 
-[View on Youtube](http://youtu.be/-VIn185iE5w)
+[View full screencast on Youtube](http://youtu.be/-VIn185iE5w)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=-VIn185iE5w
 " target="_blank"><img src="readme-images/intro.gif"
