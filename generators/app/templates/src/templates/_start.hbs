@@ -1,16 +1,15 @@
 {{!-- Main title slide --}}
-<section class="section-title" data-background="{{ theme.mainColor }}" data-transition="{{ theme.specialTransition }}">
-	<img src="images/logo.png" alt="Logo" />
+<section class="section-title" data-transition="{{ theme.specialTransition }}">
 	<h2>{{ title }}</h2>
 	<h3>{{ subtitle }}</h3>
 </section>
 
 {{!-- About the author --}}
 <section>
-	<img class="constrain-width" src="{{ githubData.avatar_url }}" alt="{{ githubData.name }}'s avatar'" />
+	<img class="constrain-width" src="{{ social.profile }}" alt="{{ social.name }}'s avatar'" />
 	<h2>{{ greetingText }}</h2>
 	<p>{{ githubData.name }}</p>
-	<p><a href="{{ githubData.html_url }}">@{{ githubData.login }}</a>
+	<p class="social-links"><a class="social-links__twitter" href="http://twitter.com/{{ social.twitter }}">@{{ social.twitter }}</a><a href="http://github.com/{{ social.github }}">@{{ social.github }}</a>
 </section>
 
 {{!-- Presentation outline --}}

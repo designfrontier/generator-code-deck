@@ -1,13 +1,38 @@
 {{!-- Section title slide --}}
-<section class="section-title" data-background="<%= mainColor %>" data-transition="zoom">
-	<h1>{{ title }}</h1>
+<section class="section-title" data-transition="zoom">
+	<h2>{{ title }}</h2>
 	{{#if subtitle }}<h3>{{ subtitle }}</h3>{{/if}}
 </section>
 
-	{{!-- Repeat for each slide in the section --}}
-	{{#each slides }}
-		<section>
-			<h2>{{ title }}</h2>
-			{{{ uniqueContent }}}
-		</section>
-	{{/each}}
+{{!-- Repeat for each slide in the section --}}
+{{#each slides }}
+    <section  {{#if background ~}}
+        data-background="
+		{{~#if background.color ~}}
+        	{{background.color}}
+        {{~/if ~}}"
+        {{#if background.image ~}}
+        	data-background-image="images/{{background.image}}"
+        {{~/if~}}
+        {{#if background.size ~}}
+        	data-background-size="{{background.size}}"
+        {{~/if~}}
+        {{~#if background.repeat ~}}
+        	data-background-repeat="{{background.repeat}}"
+        {{~/if~}}
+        {{~#if background.position ~}}
+        	data-background-position="{{background.position}}"
+        {{~/if~}}
+    {{~/if ~}} class="{{ classes }}">
+        <h2>{{{ title }}}</h2>
+        {{{ uniqueContent }}}
+
+        {{#if notes}}
+            <aside class="notes">{{{notes}}}</aside>
+        {{/if}}
+
+        {{#if image}}
+        	<div class="{{#if image.class}} {{ image.class }} {{else}}image__attribution{{/if}}">{{{ image.attribution }}}</div>
+        {{/if}}
+    </section>
+{{/each}}

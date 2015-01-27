@@ -16,7 +16,12 @@ var data = {
 	// ------------------------------------------
 	// CUSTOMIZE BELOW
 	// ------------------------------------------
-
+	social: {
+		twitter: 'daniel_sellers',
+		github: 'designfrontier',
+		profile: 'http://photos-h.ak.instagram.com/hphotos-ak-xpf1/t51.2885-15/10755899_365394280313935_633423439_n.jpg',
+		name: 'Daniel Sellers'
+	},
 	theme: {
 		mainColor: '<%= mainColor %>',
 		specialTransition: 'zoom'
@@ -42,8 +47,14 @@ var coolFunction = function() {\
 						</pre>'
 				},
 				{
-					title: 'This is the 2nd slide',
-					uniqueContent: '<p>This is a paragraph.</p>'
+					title: 'this is not a module.'
+					, background: {
+						image: 'swissArmy_1.jpg'
+					}
+					, image: {
+						attribution: 'Swiss Army Knife by Basheer Tome | CC BY 2.0'
+					}
+					, classes: 'invert--header'
 				},
 				{
 					title: 'This is the 3rd slide',
